@@ -10,7 +10,7 @@ php artisan make:notification CustomResetPasswordNotification
 
 ## Step 2: Update the Notification Logic
 
-Edit app/Notifications/CustomResetPasswordNotification.php to extend the base Laravel reset class and use your own logic or view:
+Edit `app/Notifications/CustomResetPasswordNotification.php` file to extend the base Laravel reset class and use your own logic or view:
 
 ```
 <?php
@@ -84,7 +84,7 @@ class CustomResetPasswordNotification extends Notification
 }
 ```
 
-## Step 3: Finally, add the sendPasswordResetNotification method at the end in your User model class (app/Models/User.php):
+## Step 3: add the `sendPasswordResetNotification` method at the end in your User model class (app/Models/User.php):
 
 ```
 use App\Notifications\CustomResetPasswordNotification;
@@ -96,7 +96,7 @@ public function sendPasswordResetNotification($token)
 }
 ```
 
-## Step 4: Make view blade file at views/emails/password_reset.blade.php and write desired custom email template or following code:
+## Step 4: Make view blade file at `views/emails/password_reset.blade.php` and write desired custom email template or following code:
 
 ```
 @extends('layouts.emaillayout')
@@ -123,10 +123,11 @@ public function sendPasswordResetNotification($token)
 <p><small>If you're having trouble clicking the "Reset Password" button, copy and paste the URL below into your web browser: <a href="{!! $url !!}">{!! $url !!}</a></small></p>
 
 @endsection
+```
 
+## Step 5: Finally, make email view layouts blade file at `views/layouts/emaillayout.blade.php` and put the below code:
 
-## Step 5: Make email view layouts blade file at views/layouts/emaillayout.blade.php and put the below code:
-
+```
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -265,8 +266,8 @@ td.body{
 </html>
 ```
 
+## Output: 
 
 <img src="laravel-reset-password-template-screenshot.png" alt="Laravel Password Reset Email Customization" alt="Laravel Password Reset Email Customization">
 
-
-### Thank You :)
+### Happy to share. Thank You :)
