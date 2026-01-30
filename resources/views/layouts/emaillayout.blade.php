@@ -24,7 +24,7 @@ small{
     font-size: 14px;
 }
 body {
-    background-color: #10384d;
+    background-color: #eaeaea;
     color: #52525b;
     font-family: Helvetica, sans-serif, arial;
     -webkit-font-smoothing: antialiased;
@@ -39,6 +39,7 @@ a, a:link, a:hover, a:visited, a:focus, a:active{
 }
 button, .btn {
     display: inline-block;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -51,9 +52,8 @@ button, .btn {
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    border-radius: .25rem;
+    border-radius: 30px;
+    padding: 6px 24px;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 button, .btn-primary {
@@ -74,7 +74,7 @@ hr{
     background-color: #ffffff;border-radius:10px;border:solid 1px #cacaca;margin:0px auto;max-width: 600px;
 }
 .header{
-    background-color: #f4f5f6;border-radius:10px 10px 0px 0px;border-bottom:solid 1px #cacaca;
+    background-color: #444444;border-radius:10px 10px 0px 0px;border-bottom:solid 1px #cacaca;
 }
 .header .content-cell{
     padding: 20px; text-align:center;
@@ -87,10 +87,15 @@ td.body{
     padding: 20px;
 }
 .footer{
-    background-color: #f4f5f6;border-radius:0px 0px 10px 10px;border-top:solid 1px #cacaca;
+    background-color: #444444;color: #ffffff;border-radius:0px 0px 10px 10px;border-top:solid 1px #cacaca;
 }
 .footer .content-cell{
     padding: 20px; text-align:center;
+}
+.header a, .header a:link, .header a:hover, .header a:visited, .header a:focus, .header a:active,
+.footer a, .footer a:link, .footer a:hover, .footer a:visited, .footer a:focus, .footer a:active{
+    color: #ffffff;
+    text-decoration: none;
 }
 @media only screen and (max-width: 600px) {
     .wrapper{
